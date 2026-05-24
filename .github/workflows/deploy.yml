@@ -39,3 +39,5 @@ jobs:
             *.log
             .env
             .env.*
+          exclude-negate: |
+            plugin/onoff-builder-bridge/data/**

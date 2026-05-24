@@ -242,6 +242,19 @@ if (!function_exists('onoff_builder_get_import')) {
             }
         }
 
+        // imports.json 미동기화 시에도 imports/{id}/ 폴더가 있으면 사용 (git/FTP 복구용)
+        if (function_exists('onoff_builder_resolve_import_index_file')) {
+            if (onoff_builder_resolve_import_index_file($id, 'index.html') !== '') {
+                return array(
+                    'id'         => $id,
+                    'name'       => $id,
+                    'path'       => $id,
+                    'entry'      => 'index.html',
+                    'created_at' => '',
+                );
+            }
+        }
+
         return null;
     }
 }
