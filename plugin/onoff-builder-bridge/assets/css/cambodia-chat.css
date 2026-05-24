@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+html,
+body {
+  margin: 0;
+  background: #03050a;
+}
+
 /* 온오프 iCRM 챗봇 — 우측 하단 고정 */
 iframe[id^="chat-icrm-widget-"] {
   position: fixed !important;
@@ -15,16 +21,5 @@ iframe[id^="chat-icrm-widget-"] {
   iframe[id^="chat-icrm-widget-"] {
     right: 12px !important;
     bottom: 72px !important;
-  }
-}
-
-/* 모바일 하단 액션바·푸터가 챗봇에 가리지 않도록 */
-body {
-  padding-bottom: max(5rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem));
-}
-
-@media (min-width: 768px) {
-  body {
-    padding-bottom: max(5.5rem, calc(env(safe-area-inset-bottom, 0px) + 5rem));
   }
 }
