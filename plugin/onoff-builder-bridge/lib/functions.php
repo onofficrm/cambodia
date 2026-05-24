@@ -609,6 +609,17 @@ if (!function_exists('onoff_builder_render_import_page')) {
         $html = onoff_builder_remove_base_tags($html);
         $html = onoff_builder_rewrite_asset_paths($html, $id, $entry);
 
+        if (function_exists('cambodia_chat_print_assets')) {
+            ob_start();
+            cambodia_chat_print_assets();
+            $inject = ob_get_clean();
+            if (stripos($html, '</body>') !== false) {
+                $html = preg_replace('#</body>#i', $inject . '</body>', $html, 1);
+            } else {
+                $html .= $inject;
+            }
+        }
+
         header('Content-Type: text/html; charset=utf-8');
         echo $html;
         exit;
