@@ -10,7 +10,7 @@ if (!defined('_GNUBOARD_')) {
 $site_config = array(
     'site_name'           => '샘플 사이트',
     'site_desc'           => '빌더 디자인 적용이 쉬운 그누보드 베이스 템플릿',
-    'home_builder_bridge_id' => 'cambodia-main',
+    'home_builder_bridge_id' => 'cambodia',
     /* 온오프 iCRM 챗봇 (chat.icrm.co.kr) */
     'chat_icrm_site_key'   => '422dae9b225bc7fe05811fc6e4076083f4813353aba82a69',
     'chat_icrm_widget_url' => 'https://chat.icrm.co.kr/widget.js',
